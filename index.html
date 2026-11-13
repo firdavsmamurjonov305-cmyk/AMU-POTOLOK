@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111214">
+  <meta name="description" content="AMU POTОLOK — shift dizaynini tanlash, narxini hisoblash va buyurtmani kuzatish platformasi.">
+  <title>AMU POTОLOK — Smart Ceiling Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" data-page="home" aria-label="AMU POTОLOK bosh sahifa">
+        <span class="brand-mark">A<span>✦</span></span>
+        <span class="brand-copy"><b>AMU <i>POTОLOK</i></b><small>SMART CEILING</small></span>
+      </a>
+      <div class="side-label" data-i18n="workspace">ISH MAYDONI</div>
+      <nav class="side-nav" id="main-nav" aria-label="Asosiy navigatsiya">
+        <button class="nav-item active" type="button" data-page="home"><span>⌂</span><b data-i18n="navHome">Bosh sahifa</b></button>
+        <button class="nav-item" type="button" data-page="catalog"><span>▦</span><b data-i18n="navCatalog">Dizayn katalogi</b><small>14</small></button>
+        <button class="nav-item" type="button" data-page="calculator"><span>⊞</span><b data-i18n="navCalc">Narx hisoblash</b></button>
+        <button class="nav-item" type="button" data-page="simulator"><span>◈</span><b data-i18n="navSim">3D simulyator</b><em>NEW</em></button>
+        <button class="nav-item" type="button" data-page="ai"><span>✦</span><b>AMU AI DESIGN</b><em>AI</em></button>
+        <button class="nav-item" type="button" data-page="order"><span>＋</span><b data-i18n="navOrder">Buyurtma berish</b></button>
+        <button class="nav-item" type="button" data-page="orders"><span>◷</span><b data-i18n="navOrders">Buyurtmalarim</b><small id="order-nav-count">0</small></button>
+        <button class="nav-item" type="button" data-page="gallery"><span>▧</span><b data-i18n="navGallery">Ishlarimiz</b></button>
+        <button class="nav-item" type="button" data-page="payments"><span>◉</span><b data-i18n="navPayments">To‘lovlar</b></button>
+        <button class="nav-item" type="button" data-page="warranty"><span>◇</span><b data-i18n="navWarranty">Kafolat</b></button>
+        <button class="nav-item role-only client-only" type="button" data-page="profile"><span>◉</span><b data-i18n="navProfile">Shaxsiy kabinet</b></button>
+        <button class="nav-item" type="button" data-page="support"><span>⌁</span><b data-i18n="navSupport">Aloqa va yordam</b></button>
+      </nav>
+      <div class="side-label role-label" data-i18n="roleArea">MAXSUS KABINETLAR</div>
+      <nav class="side-nav role-nav" aria-label="Maxsus kabinetlar">
+        <button class="nav-item role-only worker-only" type="button" data-page="worker"><span>⚒</span><b data-i18n="navWorker">Usta kabineti</b></button>
+        <button class="nav-item role-only owner-only" type="button" data-page="team"><span>♧</span><b data-i18n="navTeam">Ustalar boshqaruvi</b></button>
+        <button class="nav-item role-only owner-only" type="button" data-page="finance"><span>◫</span><b data-i18n="navFinance">Moliya dashboardi</b></button>
+        <button class="nav-item role-only owner-only" type="button" data-page="admin"><span>⚙</span><b data-i18n="navAdmin">Admin panel</b></button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="support-mini"><span class="online-pulse"></span><div><b data-i18n="supportOnline">Maslahatchi onlayn</b><small>Har kuni 09:00 — 21:00</small></div></div>
+        <a href="tel:+998952241041" class="side-phone">+998 95 224 10 41 <span>↗</span></a>
+        <small class="version-note">AMU POTОLOK · DEMO v1.0</small>
+      </div>
+    </aside>
+
+    <div class="main-shell">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobile-menu" type="button" aria-label="Menyuni ochish">☰</button>
+        <div class="breadcrumb"><span data-i18n="brandLabel">AMU POTОLOK</span><i>/</i><b id="page-breadcrumb">Bosh sahifa</b></div>
+        <div class="top-actions">
+          <label class="language-picker"><span>◎</span><select id="language-select" aria-label="Til"><option value="uz">O‘zbekcha</option><option value="uzc">Ўзбекча</option><option value="ru">Русский</option></select></label>
+          <button class="icon-button notification-button" type="button" id="open-notifications" aria-label="Bildirishnomalar">♧<i></i></button>
+          <label class="role-picker"><span class="avatar">AM</span><select id="role-select" aria-label="Demo foydalanuvchi roli"><option value="client">Mijoz demo</option><option value="worker">Usta demo</option><option value="owner">Owner / Admin demo</option></select></label>
+        </div>
+      </header>
+      <main class="page-content" id="page-content" tabindex="-1"></main>
+      <footer class="app-footer"><span>© 2025 AMU POTОLOK</span><span>Premium shift yechimlari <b>✦</b></span></footer>
+    </div>
+  </div>
+
+  <nav class="mobile-bottom-nav" aria-label="Mobil navigatsiya">
+    <button type="button" data-page="home" class="active"><span>⌂</span><small data-i18n="navHome">Bosh sahifa</small></button>
+    <button type="button" data-page="catalog"><span>▦</span><small data-i18n="navCatalog">Katalog</small></button>
+    <button type="button" data-page="order"><span>＋</span><small data-i18n="navOrder">Buyurtma</small></button>
+    <button type="button" data-page="gallery"><span>▧</span><small data-i18n="navGallery">Ishlar</small></button>
+    <button type="button" data-page="support"><span>⌁</span><small data-i18n="navSupport">Aloqa</small></button>
+  </nav>
+
+  <dialog class="preview-dialog" id="preview-dialog">
+    <button class="dialog-close" type="button" aria-label="Yopish">×</button>
+    <img id="preview-image" alt="">
+    <div class="preview-copy"><div><small id="preview-category"></small><h2 id="preview-title"></h2></div><button id="preview-order" class="button button-gold" type="button">Shu dizaynni tanlash <span>↗</span></button></div>
+    <p id="preview-description"></p>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="modal-scrim" id="modal-scrim"></div>
+</body>
+</html>
